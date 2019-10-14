@@ -13,5 +13,11 @@ with above-listed scripts, i think we can create our own RL algo based on the HU
 
 ## Note
 - if you want to change the behaviour of agent, in other words, if you want to change the logic to select an action, then modify(override from your subclass) `tf_policy.Base._action` API. this uses `_distribution` API, which is supposed to be implemented by your subclass.
-- `tf_agent.TFAgent` mainly is responsible for training the model(the neural network/other models used in `network.Network`) by `train` API.
+- `tf_agent.TFAgent` mainly is responsible for training the model(the neural network/other models used in `network.Network`) by `train` API given a computed loss values by yourself.
 - `replay_buffer` has to know the placeholders of collected data(trajectories), which is supposed to be provided by `collect_policy` in `tf_agent.TFAgent`.
+
+
+## References to grab its architectural concept
+- https://www.youtube.com/watch?v=tAOApRQAgpc
+- https://www.youtube.com/watch?v=-TTziY7EmUA
+- https://www.youtube.com/watch?v=a_OfZoF4IYc
